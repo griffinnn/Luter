@@ -18,7 +18,7 @@ namespace Luter
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Gimme the lut...");
+            Console.WriteLine("Launching WebDriver...");
             IWebDriver driver = new ChromeDriver();
             driver.Url= "http://www.supremenewyork.com/shop/all/jackets";
             driver.FindElement(By.XPath("//*[@id=\"container\"]/article[4]/div/h1/a")).Click();
@@ -27,7 +27,7 @@ namespace Luter
             System.Threading.Thread.Sleep(2000);
             driver.FindElement(By.XPath("//*[@id=\"cart\"]/a[2]")).Click();
             System.Threading.Thread.Sleep(2000);
-            driver.FindElement(By.Id("order_billing_name")).SendKeys("Lawtomated.");
+            driver.FindElement(By.Id("order_billing_name")).SendKeys("TestName");
             driver.FindElement(By.Id("order_email")).SendKeys("test@email.com.");
             driver.FindElement(By.Id("order_tel")).SendKeys("07711047857");
             driver.FindElement(By.Id("bo")).SendKeys("10 Test Street.");
